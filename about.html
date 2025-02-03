@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Muhammad Shaheer Imran</title>
+    <style>
+        /* Semantic CSS for bio-card */
+        bio-card {
+            display: block;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        bio-card h3 {
+            font-size: 1.5em;
+        }
+
+        bio-card p {
+            font-size: 1em;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -40,36 +57,10 @@
                 <li>Member, University Bioinformatics Club</li>
             </ul>
         </section>
-
-        <!-- Custom Hello World Element -->
-        <hello-world></hello-world>
     </main>
 
     <footer>
         <p>&copy; 2025 Muhammad Shaheer Imran</p>
     </footer>
-
-    <script>
-        // Custom Element for Bio Card
-        class BioCard extends HTMLElement {
-            constructor() {
-                super();
-                this.innerHTML = `<section>
-                    <h3>${this.getAttribute("name") || "Name"}</h3>
-                    <p>${this.innerHTML}</p>
-                </section>`;
-            }
-        }
-        customElements.define("bio-card", BioCard);
-
-        // Custom Hello World Element
-        class HelloWorld extends HTMLElement {
-            constructor() {
-                super();
-                console.log("Hello, world!");
-            }
-        }
-        customElements.define("hello-world", HelloWorld);
-    </script>
 </body>
 </html>
