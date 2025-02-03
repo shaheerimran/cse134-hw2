@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Muhammad Shaheer Imran</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <bio-card>
+                <h3>Muhammad Shaheer Imran</h3>
+                <p>Bioinformatics undergraduate at UC San Diego, minoring in Linguistics and Computer Science.</p>
+            </bio-card>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <p>University of California, San Diego (Sep 2021 – June 2025)</p>
+            <p>Major: Biology (Bioinformatics)</p>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <ul>
+                <li>Data Team Intern, Storyline Health</li>
+                <li>Member, ACM @ UCSD</li>
+                <li>Member, University Bioinformatics Club</li>
+            </ul>
+        </section>
+
+        <!-- Custom Hello World Element -->
+        <hello-world></hello-world>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Muhammad Shaheer Imran</p>
+    </footer>
+
+    <script>
+        // Custom Element for Bio Card
+        class BioCard extends HTMLElement {
+            constructor() {
+                super();
+                this.innerHTML = `<section>
+                    <h3>${this.getAttribute("name") || "Name"}</h3>
+                    <p>${this.innerHTML}</p>
+                </section>`;
+            }
+        }
+        customElements.define("bio-card", BioCard);
+
+        // Custom Hello World Element
+        class HelloWorld extends HTMLElement {
+            constructor() {
+                super();
+                console.log("Hello, world!");
+            }
+        }
+        customElements.define("hello-world", HelloWorld);
+    </script>
+</body>
+</html>
